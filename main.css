@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    color: white;
+    font-family: "Sour Gummy", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0.5;
+}
+
+#lyricsDisplay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+}
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: -500px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    height: max-content;
+    width: max-content;
+    border: gainsboro 4px double;
+    padding: 2%;
+    border-radius: 10px;
+    background: linear-gradient(rgb(53, 53, 53, 0.8), rgb(70,70,70, 0.8));
+    transition: left 0.3s ease-in-out;
+}
+
+#controls.open {
+    left: 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #515050;    
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+#open {
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top: 2.2%;
+    left: 0%;
+    margin-left: 1.3rem;
+    cursor: pointer;
+}
+
+span {
+    font-size: 4.5rem;
+    transition: 2s ease color;
+    position: absolute;
+    cursor: pointer;
+}
+
+span:hover {
+color: rgb(209, 215, 220);
+}
+
+.logo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1%;
+    position: relative;
+}
+
+.more {
+    float: right;
+    padding: 1%;
+    transform: translateY(-116%);
+    font-size: 1.3rem;
+}
+
+#startRecording, #stopRecording, #refreshButton {
+    display: block;
+    margin: 1.2em;
+}
+
+.color-picker {
+    display: flex; 
+    gap: 20px; 
+}
+
+.color-group {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+#Close {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.section-one {
+    background: linear-gradient(25deg, rgb(85, 85, 85), rgb(73, 73, 73));
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.toggle {
+    background: linear-gradient(90deg, rgb(85, 85, 85), rgb(73, 73, 73));
+    padding: 1em;
+    border-radius: 10px;   
+}
+
+#refreshButton {
+    width: 400px;
+    height: 60px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#refreshButton .fa-refresh {
+    font-size: 30px;
+}
+
+#refreshButton:hover .fa-refresh {
+    animation: spin 3s ease infinite;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-close:hover {
+ color: #d3d3d3;
+}
+
+.more-panel {
+    position: relative;
+    left: 550px;
+    top: -400px;
+    background-color: #515050;
+    width: max-content;
+    height: 300px;
+}

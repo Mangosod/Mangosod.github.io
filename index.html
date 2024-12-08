@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer with Lyrics and Radial Spectrum</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&family=Pixelify+Sans:wght@400..700&family=Rowdies:wght@300;400;700&family=Sixtyfour+Convergence&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <script src="close.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <canvas id="visualizerCanvas"></canvas>
+    <div id="lyricsDisplay"></div>
+
+    <div class="logo">
+        <h1 id="logo-txt">MSVisualizer</h1>
+    </div>
+
+    <div id="controls">
+        <div id="Close" class="close-controls">
+            <i class="fa fa-close" style="font-size:35px"></i>
+        </div>
+        <div class="section-one">
+        <h1 class="file">Choose An Audio File</h1>
+        <input type="file" id="fileInput"/>
+        <button id="playPauseButton">Play</button>
+        <h1 class="lyrics">Import lyrics using the .lrc format</h1>
+        <input type="file" id="lyricsInput"/>
+        <h1>Choose a Background Image</h1>
+        <input type="file" id="imginput"/>
+        </div>
+        <h1>Choose Gradient Colors</h1>
+        <div class="color-picker">
+            <div class="color-group">
+                <label for="colorStart">Start Color:</label>
+                <input type="color" id="colorStart" value="#ff0000">
+            </div>
+            <div class="color-group">
+                <label for="colorEnd">End Color:</label>
+                <input type="color" id="colorEnd" value="#0000ff">
+            </div>
+        </div>        
+        <h1>Adjust Brightness</h1>
+        <input type="range" id="brightnessSlider" min="0" max="1" step="0.01" value="0.8">
+        <div class="toggle">
+        <button id="toggleBar">Bar Visualizer</button>
+        <button id="toggleRadial">Radial Spectrum Visualizer</button>
+        </div>
+        <button id="refreshButton">
+            <i class="fa fa-refresh" style="font-size: 30px;"></i>
+        </button>
+    </div>
+    <div id="open">
+        <span>&#9881;</span>
+    </div>
+</body>
+</html>
