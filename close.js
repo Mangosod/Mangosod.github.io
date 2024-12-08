@@ -26,3 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+function setCanvasSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    
+    // Adjust canvas size for mobile devices
+    canvas.width = width;
+    canvas.height = height > 400 ? height : 400; // Minimum height for smaller screens
+}
+window.addEventListener('resize', setCanvasSize);
+setCanvasSize();
+
